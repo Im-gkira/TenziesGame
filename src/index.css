@@ -67,3 +67,17 @@ body {
 .dice>input{
   display:none;
 }
+
+.main>h1{
+  font-size: 54px;
+  margin: 0 0 0 0;
+  font-weight: 700;
+  padding: 0;
+}
+
+.main>p{
+  font-size: 24px;
+  word-wrap: break-word;
+  margin: 20px 20%;
+  text-align: center;
+}
