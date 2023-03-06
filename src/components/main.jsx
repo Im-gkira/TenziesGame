@@ -1,12 +1,17 @@
 import React from "react";
+import { useState,useEffect } from "react";
 import Dice from "./dice";
 
 export default function Main(){
 
-    let diceData = []
+    const getNewDice = ()=>Array.from({length: 10}, () => Math.floor(Math.random() * 5)+1);
 
-    for (let i=0;i<10;i++){
-        diceData.push(<Dice number={i+1}/>)
+    const [diceArr,setDiceArr] = useState(getNewDice()) 
+    
+    const diceData = [diceArr.map(function(data){ return <Dice number={data}/> })]
+
+    function clickHandler(){
+        setDiceArr(getNewDice());
     }
 
     return (
@@ -18,7 +23,7 @@ export default function Main(){
             <div className="dice--grid">
             {diceData}
             </div>
-            
+            <button onClick={clickHandler} className="btn">Roll</button>
         </div>
     )
 }
