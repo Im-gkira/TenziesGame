@@ -1,0 +1,19 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #2B283A;
+}
+
+.main{
+  height: 80vh;
+  background-color: #F5F5F5;
+  flex-direction: column;
+  margin: 10vh auto;
+  text-align: center;
+  width: 90%;
+}
